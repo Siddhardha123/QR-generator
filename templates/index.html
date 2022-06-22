@@ -11,11 +11,13 @@
       <div id="container" class="bg-blue-400 h-[100vh] w-[100vw] flex">
                 <div id="input" class="absolute left-[40%] top-[10%]">
                     <p class="text-[2vmax]">Enter the link to generate QR code</p>
+                <form action="/qrs" method="post">
                     <input type="text" class="h-10 rounded w-64">
                     <button class="bg-red-100 h-10 w-20 rounded">create QR</button>
+                </form>
                 </div>
                 <div id="image" class="absolute left-[40%] top-[40%]">
-                      <img src="{{url_for('static', filename='./myqr.png')}}" alt="sid">
+                      <img src="{{image1}}" alt="sid">
                       <button class="bg-red-100 h-10 w-20 rounded mt-10">download</button>
                 </div>
       </div>
