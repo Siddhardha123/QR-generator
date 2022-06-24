@@ -6,24 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qr generator</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    
 </head>
 <body>
-      <div id="container" class="bg-blue-400 h-[100vh] w-[100vw] flex">
-                <div id="input" class="absolute left-[40%] top-[10%]">
-                    <p class="text-[2vmax]">Enter the link to generate QR code</p>
-                <form action="/qrs" method="post">
-                    <py-script src="./qr.py">
-                    </py-script>
-                    <input type="text" class="h-10 rounded w-64">
-                    <button class="bg-red-100 h-10 w-20 rounded">create QR</button>
-                </form>
-                </div>
-                <div id="image" class="absolute left-[40%] top-[40%]">
-                      <img src="" alt="sid">
-                      <button class="bg-red-100 h-10 w-20 rounded mt-10">download</button>
-                </div>
-      </div>
+    <div class="main" class="relative h-[100vh] w-[100vw]"> 
+            <p class="text-4xl text-center">
+                QR CODE GENERATOR
+            </p>
+        <div id="container" class="h-[70%] w-[70%] bg-white-500 left-[15%] absolute rounded-xl shadow bg-blue-200">
+             
+              <div id="left" class="absolute top-[20%]  w-[50%] pl-[5%]">
+                 <p class="text-[2vmax]">Enter the link or text</p>
+                 <input type="text" class="h-[3vmax]  w-[20vmax] rounded-md">
+                 <br>
+                 <button class="h-[3vmax] w-[8vmax] bg-red-200 rounded-md mt-5">Generate</button>
+              </div>
+              <div id="right" class="absolute  w-[50%] top-[20%] left-[50%]">
+                 <img src="./myqr.png" alt="qr" class="h-[20vmax] mx-28">
+                 <button class="h-[3vmax] w-[8vmax] bg-red-200 rounded-md ml-28 mt-5">download
+
+                 </button>
+              </div>
+               
+        </div>
+
+    </div>
+       
 </body>
 </html>
